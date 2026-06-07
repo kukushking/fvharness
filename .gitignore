@@ -1,0 +1,20 @@
+# Contest target code — often large, sometimes under contest rules; keep it out of git.
+contests/*
+!contests/.gitkeep
+
+# Certora / Foundry build artifacts
+.certora_internal/
+.certora_config/
+emv-*/
+out/
+cache/
+broadcast/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.uv/
+
+# local secrets
+.env

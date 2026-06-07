@@ -1,0 +1,18 @@
+[project]
+name = "fvharness"
+version = "0.1.0"
+description = "Agentic harness for Certora formal-verification contests: an LLM writes CVL specs, the Certora Prover + mutation testing is the reward signal."
+requires-python = ">=3.11"
+# Needs an SDK new enough for adaptive thinking + output_config.effort (2026-era).
+# If anything errors on import/params, `uv add anthropic@latest`.
+dependencies = ["anthropic>=0.69"]
+
+[project.scripts]
+fvharness = "fvharness.loop:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fvharness"]
