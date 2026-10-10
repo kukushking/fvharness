@@ -1,5 +1,14 @@
 # fvharness — agentic formal verification for smart contracts
 
+> **Status (October 2026): complete as an exploration, not actively developed.**
+> Built in one day (7 June 2026) to compete in Certora formal-verification contests. The harness
+> works end-to-end (see [`examples/`](examples/)), but on checking entry we found the community
+> contests had been dormant since ~October 2025 — AI-assisted spec writing had removed the need
+> to crowdsource human spec-writers, and the host platforms were winding down. We were a few
+> months late. [`INDUSTRY_NOTES.md`](INDUSTRY_NOTES.md) records what we found about the market.
+> The repo is left up as-is: a verifier-grounded LLM loop that produced real, Prover-checked
+> specs.
+
 An LLM writes [Certora](https://www.certora.com/) **CVL specifications**, the **Certora Prover**
 verifies them, and a **mutation-testing loop** scores how many injected bugs the spec catches —
 then feeds failures back and iterates. Generate → verify → score → repeat, with the Prover as
